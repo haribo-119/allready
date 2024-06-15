@@ -21,11 +21,6 @@ body {
   margin: auto;
   position: relative;
 }
-
-.main {
-  /* border: 1px solid black; */
-}
-
 .container {
   display: flex ;
   flex-direction: column;
@@ -44,13 +39,12 @@ body {
 h1 {
   color: #ef4e4f;
   text-transform: uppercase;
-  /* margin: 5% 0% 0% 5%; */
   margin: 0% 0% 10% 5%;
 }
-
 .main {
   padding: 35px 0;
 }
+
 .main #rememberId{
   /* margin: 5% 0% 5% 0%; */
   position: relative;
@@ -59,7 +53,6 @@ h1 {
 }
 .main .btn {
   margin: 10px 0px;
-  /* margin: 10% 0% 10% 0%; */
   display: inline-block;
   padding: 8px;
   background: #ef4e4f;
@@ -67,7 +60,6 @@ h1 {
   cursor: pointer;
   transform: translate(22%, 0%);
   width: 70%;
-  /* border-radius :10px 10px 10px 10px; */
 }
 
 button,
@@ -104,7 +96,6 @@ input ::-moz-focus-inner {
   display: block;
   position: relative;
   margin: 0 5px 30px 0;
-  /* border: 1px solid black; */
 }
 .loginInput input {
   transition: 0.1s all linear;

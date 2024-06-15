@@ -11,25 +11,19 @@
     <script src="${pageContext.request.contextPath}/resources/js/login.js"></script>
     <title>login</title>
 </head>
-<style>
-    .idMsg {
-        transition: opacity 3s;
-    }
-
-</style>
 <body>
 <div class="container">
     <form action="<c:url value="/login/login.do"/> " method="POST" onsubmit="return formCheck(this)" >
         <h1>invite you!</h1>
         <div class="main">
             <div class="loginInput">
-                <label for="id">ID<b style="color:red" class="idMsg"></b></label>
+                <label for="id">ID<b style="color:red" class="msg"></b></label>
                 <input id="id" name="id" type="text" value="${cookie.id.value}"/>
                 <!-- <div id="character_remaining"></div> -->
             </div>
 
             <div class="loginInput">
-                <label for="pwd">Password<b style="color:red" class="idMsg"></b></label>
+                <label for="pwd">Password<b style="color:red" class="msg"></b></label>
                 <input id="pwd" name="pw" type="password"  />
             </div>
             <label id="rememberId"
@@ -43,47 +37,47 @@
                 <a href="member">회원가입</a>
             </div>
         </div>
-        <script>
-            function formCheck(bin){
-                if(bin.id.value.length === 0){
-                    setMessage('를 입력해주세요.',bin.id,'id');
-                    return false;
-                }
-                if(bin.pw.value.length === 0){
-                    setMessage('를 입력해주세요.',bin.pw,'pw');
-                    return false;
-                }
-                return true;
-            }
-
-            function setMessage(msg,element,filter){
-
-                if(filter === "id") {
-                    document.getElementsByClassName("idMsg")[0].innerHTML = msg;
-                }
-                if(filter === "pw") {
-                    document.getElementsByClassName("idMsg")[1].innerHTML = msg;
-                }
-
-                setTimeout(function() {
-                    var elements = document.getElementsByClassName("idMsg");
-                    console.log(elements);
-                    for (var i = 0; i < elements.length; i++) {
-                        elements[i].style.opacity = '0';
-                    }
-                    setTimeout(function() {
-                        for (var i = 0; i < elements.length; i++) {
-                            elements[i].innerHTML = '';
-                            elements[i].style.opacity = '1';
-                        }
-                    }, 3000); // 3초 후에 내용 삭제
-                }, 3000); // 3초 후에 투명도 조정 시작
-
-            }
-            //elements[i].style.opacity = '0';
-        </script>
     </form>
-
 </div>
 </body>
+<script>
+    function formCheck(bin){
+        if(bin.id.value.length === 0){
+            setMessage('를 입력해주세요.',bin.id,'id');
+            return false;
+        }
+        if(bin.pw.value.length === 0){
+            setMessage('를 입력해주세요.',bin.pw,'pw');
+            return false;
+        }
+        document.querySelector('.btn').disabled = true;
+        return true;
+    }
+
+    function setMessage(msg,element,filter){
+
+        if(filter === "id") {
+            document.getElementsByClassName("msg")[0].innerHTML = msg;
+        }
+        if(filter === "pw") {
+            document.getElementsByClassName("msg")[1].innerHTML = msg;
+        }
+
+        setTimeout(function() {
+            var elements = document.getElementsByClassName("msg");
+            console.log(elements);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.transition = "opacity 3s";
+                elements[i].style.opacity = '0';
+            }
+            setTimeout(function() {
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].innerHTML = '';
+                    elements[i].style.opacity = '1';
+                }
+            }, 3000); // 3초 후에 내용 삭제
+        }, 3000); // 3초 후에 투명도 조정 시작
+
+    }
+</script>
 </html>

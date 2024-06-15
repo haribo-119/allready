@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body{
-  background: linear-gradient(to right, #002762,skyblue);
+  /*background: linear-gradient(to right, #002762,skyblue);*/
 }
 ul{
   list-style: none;
@@ -15,7 +15,7 @@ header .left{
   padding: 43px  0 0 78px;
 }
 header a {
-  color:white;
+  color:black;
 }
 header .left >div> div,
 header .all,
@@ -26,7 +26,6 @@ header h2{
 header h1 {
   float:left;
   padding: 0 108px 0 0;
-  /* border: 1px solid black; */
 }
 header .left > div {
   float:left;
@@ -42,6 +41,7 @@ header h1 a {
   height:50px;
   background: url("../../images/layout.png") no-repeat -170px -70px;
   color:transparent;
+  background: green;
 }
 header nav a{
   font-size: 20px;
@@ -60,7 +60,8 @@ header nav a:before{
   bottom: 1px;
   width: 0;
   height: 1px;
-  background: #fff;
+  /*background: #fff;*/
+  background: black;
   transition: width 0.5s;
 }
 header nav a:hover:before{
@@ -78,7 +79,8 @@ header > ul li {
   margin-left: -1px;
 }
 header > ul li a {
- border: 1px solid rgba(255,255,255,0.5);
+ /*border: 1px solid rgba(255,255,255,0.5);*/
+  border:1px solid black;
  border-radius: 3px;
  display: block;
  width: 96px;
