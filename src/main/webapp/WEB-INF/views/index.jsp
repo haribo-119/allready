@@ -17,38 +17,9 @@
   <link rel="stylesheet" media="( min-width:0px) and (max-width:700px)" href="${pageContext.request.contextPath}/resources/css/mobile.css">
 
 <%--  <link rel="stylesheet" href="<c:url value='/css/test.css'/>">--%>
+  <jsp:include page="top.jsp"/>
 </head>
 <body>
-  <div class="header">
-  <header>
-    <div class="left">
-      <h1><a href="#a">Hdac</a></h1>
-      <a href="#a" class="all">all Menu</a>
-      <div class="nav">
-        <h2>Menu</h2>
-        <nav>
-          <ul>
-            <li><a href="#a">Company</a></li>
-            <li><a href="#a">Hdac</a></li>
-            <li><a href="#a">Network</a></li>
-            <li><a href="#a">News</a></li>
-            <li><a href="#a">Resources</a></li>
-          </ul>
-        </nav>
-        <div>
-          <a href="">White Peper</a>
-          <a href="">FAQ</a>
-        </div>
-        <a href="" class="close">Close</a>
-      </div>
-    </div>
-    <ul>
-      <li><a href="#a">White Peper</a></li>
-      <li><a href="#a">FAQ</a></li>
-      <li class="join"><a href="<c:url value="/login/login.do"/>">Sign In</a></li>
-    </ul>
-  </header>
-  </div>
   <main>
     <div class="a1">
       <h1>계획표</h1>
