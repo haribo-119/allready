@@ -9,16 +9,19 @@ header h1 {
 header .left{
   float: left;
   padding: 25Px 0 0 14px;
+  /*background: black;*/
 }
 header .all{
   display: block;
-  border-top:2px solid #fff; 
-  border-bottom:2px solid #fff;
+  /*border-top:2px solid #fff;*/
+  border-top:2px solid black;
+  /*border-bottom:2px solid #fff;*/
+  border-bottom:2px solid black;
   height: 14px;
   color: transparent;
   position: relative;
   width: 32px;
-  transform: scale(0.8) ;
+  transform: scale(0.8);
 }
 header .all::before{
   content: "";
@@ -27,7 +30,8 @@ header .all::before{
   left: 0;
   top:50%;
   height: 2px;
-  background: #fff;
+  /*background: #fff;*/
+  background: black;
   margin-top: -1px;
 }
 header .left > div{

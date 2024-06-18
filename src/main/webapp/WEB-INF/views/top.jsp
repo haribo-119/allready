@@ -5,14 +5,14 @@
 <div class="header">
   <header>
     <div class="left">
-      <h1><a href="#a">Hdac</a></h1>
+      <h1><a href="<c:url value="/"/>">Hdac</a></h1>
       <a href="#a" class="all">all Menu</a>
       <div class="nav">
         <h2>Menu</h2>
         <nav>
           <ul>
             <li><a href="#a">Company</a></li>
-            <li><a href="#a">Hdac</a></li>
+            <li><a href="<c:url value="/language"/>">Language</a></li>
             <li><a href="#a">Network</a></li>
             <li><a href="#a">News</a></li>
             <li><a href="#a">Resources</a></li>

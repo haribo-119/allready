@@ -22,7 +22,7 @@
 <body>
   <main>
     <div class="a1">
-      <h1>계획표</h1>
+      <h1>언어</h1>
     </div>
   </main>
 
