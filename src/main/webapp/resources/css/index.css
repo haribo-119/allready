@@ -1,6 +1,8 @@
 @charset "utf-8";
 body{
   /*background: linear-gradient(to right, #002762,skyblue);*/
+  margin: 0;
+  box-sizing: border-box;
 }
 ul{
   list-style: none;
@@ -107,8 +109,4 @@ background:rgba(255,255,255,0.2);
 /* 내용  */
 main{
   clear: both;
-}
-main .a1{
-  border: 1px solid black;
-  height: 500px;
 }

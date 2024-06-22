@@ -20,21 +20,24 @@
   <jsp:include page="top.jsp"/>
 </head>
 <style>
-.warp{width:1200px; height:1300px; background: red;}
-main{border: 3px solid black;}
+  *{ padding:0; box-sizing: border-box;}
+  main{border: 3px solid black; height:100vh;}
+.inner{width:100%; height:100%; background: burlywood;}
+  .clearfix::after{content: ''; display: block; clear:both;}
+.side{width: 20%; height:100%; background: #0091d0; float:left; border: 1px solid black;}
+.content{width:80%; height:100%; background: aquamarine; float:left; }
+button{display: flex; justify-content: flex-end ;}
+
 </style>
 <body>
+
 <main>
-    <div class="warp">
-<%--      <div class="inner">--%>
-<%--        <header></header>--%>
-<%--        <div class="content">--%>
-<%--            <aside class="side"></aside>--%>
-<%--            <article class="con"></article>--%>
-<%--        </div>--%>
-<%--        <footer></footer>--%>
-<%--      </div>--%>
-    </div>
+      <div class="inner clearfix">
+            <aside class="side">
+              <button>swich</button>
+            </aside>
+            <article class="content">con</article>
+      </div>
 </main>
 </body>
 </html>

@@ -18,55 +18,47 @@
 
 <%--  <link rel="stylesheet" href="<c:url value='/css/test.css'/>">--%>
   <jsp:include page="top.jsp"/>
+  <style>
+      main{
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:15%;
+        grid-gap: 1rem;
+        grid-template-areas:
+      'a a a'
+      'b c c'
+      'b d g'
+      'e f g';
+    }
+    .image{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image1{ grid-area: a;}
+      .image2{grid-area: b;}
+      .image3{grid-area: c;}
+      .image4{grid-area: d;}
+      .image5{grid-area: e;}
+      .image6{grid-area: f;}
+      .image7{grid-area: g;}
+  </style>
 </head>
 <body>
-  <main>
-    <div class="a1">
-      <h1>계획표</h1>
-    </div>
+  <main class="container">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/01.jpg" class="image image1">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/02.jpg" class="image image2">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/03.jpg" class="image image3">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/04.jpg" class="image image4">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/05.jpg" class="image image5">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/06.jpg" class="image image6">
+    <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/07.jpg" class="image image7">
   </main>
 
-  <!-- <footer>
-    <div class="button">
-      <ul>
-          <li>Quizlet정보</li>
-          <li>Quizlet정보</li>
-          <li>커리어</li>
-          <li>Quizlet 광고</li>
-          <li>뉴스</li>
-          <li>앱 다운로드</li>
-      </ul>
-      <ul>
-          <li>선생님을 위한 기능</li>
-          <li>Live</li>
-          <li>체크 포인트</li>
-          <li>블로그</li>
-          <li>선생님을 위한 Quizlet Plus</li>
 
-      </ul>
-      <ul>
-          <li>학생</li>
-          <li>낱말카드</li>
-          <li>학습하기</li>
-          <li>솔루션</li>
-          <li>Quizlet Plus</li>
-      </ul>
-      <ul>
-          <li>리소스</li>
-          <li>지원센터</li>
-          <li>회원가입</li>
-          <li>명예규율</li>
-          <li>커뮤니티 가이드라인</li>
-          <li>개인정보 보호</li>
-          <li>이용 약관</li>
-          <li>광고 및 쿠키 정책</li>
-      </ul>
-      <ul>
-        <li>언어</li>
-        <li>한국어</li>
-      </ul>
-  </div>
-  </footer> -->
   <div class="dim"></div>
 </body>
 </html>
