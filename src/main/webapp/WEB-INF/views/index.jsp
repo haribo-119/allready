@@ -19,20 +19,23 @@
 <%--  <link rel="stylesheet" href="<c:url value='/css/test.css'/>">--%>
   <jsp:include page="top.jsp"/>
   <style>
-      main{
-      width: 100vw;
-      height: 100vh;
-      border: 1px solid black;
+      .container{
+      /*width: 100vw;*/
+      /*height: 100vh;*/
+    }
+      .imgBox{
+          /*width: 100%;*/
+          /*height: 100%;*/
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows:15%;
+        grid-template-rows:150px repeat(2,10%) 150px;
         grid-gap: 1rem;
         grid-template-areas:
       'a a a'
       'b c c'
       'b d g'
       'e f g';
-    }
+      }
     .image{
       width: 100%;
       height: 100%;
@@ -49,6 +52,7 @@
 </head>
 <body>
   <main class="container">
+    <div class="imgBox">
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/01.jpg" class="image image1">
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/02.jpg" class="image image2">
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/03.jpg" class="image image3">
@@ -56,6 +60,7 @@
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/05.jpg" class="image image5">
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/06.jpg" class="image image6">
     <img src="${pageContext.request.contextPath}/resources/images/mainPageImg/07.jpg" class="image image7">
+    </div>
   </main>
 
 
