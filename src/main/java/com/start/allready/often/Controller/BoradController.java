@@ -15,6 +15,10 @@ public class BoradController {
         return "borad";
     }
 
+    @GetMapping("/List")
+    public String list(){
+        return "boradList";
+    }
 
 
 }
