@@ -3,7 +3,7 @@ package com.start.allready.often.domain;
 public class PageHandler {
 
     private int page; // 현재 페이지
-    private int pageSize; // 한 페이지에 목록 수
+    private int pageSize = 10; // 한 페이지에 목록 수
     private int beginPage; // 처음 (이동)
     private int endPage;  // 끝 (이동)
     private int naviSize = 10; // 이동 목록
@@ -20,9 +20,9 @@ public class PageHandler {
 
         totalPage =(int)Math.ceil(totalCnt/(double)pageSize);
         beginPage = page / naviSize * naviSize +1;
-        endPage = Math.min(beginPage + naviSize-1, totalPage);
+        endPage = Math.min(beginPage + naviSize-1, totalCnt);
         showPrev = beginPage !=1;
-        showNext = endPage != totalPage;
+        showNext = endPage != totalCnt;
     }
 
     //페이지 출력
