@@ -1,6 +1,8 @@
 package com.start.allready.often.Controller;
 
 
+import com.start.allready.often.domain.BoardDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/borad")
 public class BoradController {
 
+    @Autowired BoardDao boardDao;
+
     @GetMapping("/read")
     public String read(){
 
@@ -16,7 +20,8 @@ public class BoradController {
     }
 
     @GetMapping("/List")
-    public String list(){
+    public String list() throws Exception {
+       int test =boardDao.count();
         return "boradList";
     }
 
