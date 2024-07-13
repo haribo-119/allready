@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.start.allready.mapper.BoardMapper">
+    <select id="count" resultType="int">
+        SELECT count(*) FROM borad
+    </select>
+
+    <select id="selectAll" resultType="Board">
+        SELECT * FROM borad order by reg_date DESC, bno DESC
+    </select>
+
+    <select id="insert" parameterType="Board" >
+        insert into board (title,content,writer) values (#{title},#{content},#{writer})
+    </select>
+
+    <select id="update" parameterType="Board">
+        update board
+        set title=#{title},
+            content=#{content},
+            up_date = now()
+        where writer=#{writer} and bno=#{bno}
+    </select>
+    
+    <select id="delete" parameterType="map" >
+        delete from board where writer=#{writer} and bno =#{bno}
+    </select>
+</mapper>
+
+

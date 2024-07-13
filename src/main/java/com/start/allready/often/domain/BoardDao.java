@@ -11,4 +11,6 @@ public interface BoardDao {
     int update(Board board) throws Exception;
 
     int delete(Integer bno, String writer) throws Exception;
+
+    int deleteAll() throws Exception;
 }

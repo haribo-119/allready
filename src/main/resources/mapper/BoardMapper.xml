@@ -12,21 +12,27 @@
         SELECT * FROM board order by reg_date DESC, bno DESC
     </select>
 
-    <select id="insert" parameterType="Board" >
-        insert into board (title,content,writer) values (#{title},#{content},#{writer})
-    </select>
+    <insert id="insert" parameterType="Board" >
+        INSERT INTO board (title,content,writer) VALUES (#{title},#{content},#{writer})
+    </insert>
 
-    <select id="update" parameterType="Board">
-        update board
-        set title=#{title},
+    <update id="update" parameterType="Board">
+        UPDATE board
+        SET title=#{title},
             content=#{content},
             up_date = now()
-        where writer=#{writer} and bno=#{bno}
-    </select>
+        WHERE writer=#{writer} AND bno=#{bno}
+    </update>
     
-    <select id="delete" parameterType="map" >
-        delete from board where writer=#{writer} and bno =#{bno}
-    </select>
+    <delete id="delete" parameterType="map" >
+        DELETE FROM board WHERE writer=#{writer} AND bno =#{bno}
+    </delete>
+
+    <delete id="deleteAll">
+        DELETE FROM board
+    </delete>
+
+
 </mapper>
 
 

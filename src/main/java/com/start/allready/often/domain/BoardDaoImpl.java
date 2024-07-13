@@ -45,4 +45,9 @@ public class BoardDaoImpl implements BoardDao {
         return sqlSession.delete(namespace +"delete",map);
     }
 
+    @Override
+    public int deleteAll() throws Exception {
+        return sqlSession.delete(namespace+"deleteAll");
+    }
+
 }

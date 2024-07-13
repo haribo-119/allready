@@ -13,6 +13,13 @@ public class Board {
   private Date reg_date;
   private Date up_date;
 
+  public Board(){}
+
+  public Board(String title,String content,String writer){
+      this.title = title;
+      this.content = content;
+      this.writer = writer;
+  }
     @Override
     public String toString() {
         return "Board{" +
