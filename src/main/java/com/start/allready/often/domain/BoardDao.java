@@ -3,7 +3,7 @@ package com.start.allready.often.domain;
 import java.util.List;
 
 public interface BoardDao {
-    public int count()throws Exception;
+    int count()throws Exception;
     List<Board> selectAll() throws Exception;
 
     int insert(Board board) throws Exception;

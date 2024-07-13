@@ -19,9 +19,10 @@ public class BoradController {
         return "borad";
     }
 
-    @GetMapping("/List")
+    @GetMapping("/list")
     public String list() throws Exception {
        int test =boardDao.count();
+        System.out.println(test);
         return "boradList";
     }
 

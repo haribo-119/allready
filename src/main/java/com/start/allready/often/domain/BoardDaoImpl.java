@@ -16,6 +16,7 @@ public class BoardDaoImpl implements BoardDao {
 
     private static String namespace = "com.start.allready.mapper.BoardMapper.";
 
+
     @Override
     public int count() throws Exception {
         return sqlSession.selectOne(namespace + "count");
@@ -41,7 +42,7 @@ public class BoardDaoImpl implements BoardDao {
        Map map = new HashMap();
        map.put("bno",bno);
        map.put("writer",writer);
-        return sqlSession.delete(namespace + map);
+        return sqlSession.delete(namespace +"delete",map);
     }
 
 }

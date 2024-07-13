@@ -5,11 +5,11 @@
 
 <mapper namespace="com.start.allready.mapper.BoardMapper">
     <select id="count" resultType="int">
-        SELECT count(*) FROM borad
+        SELECT count(*) FROM board
     </select>
 
     <select id="selectAll" resultType="Board">
-        SELECT * FROM borad order by reg_date DESC, bno DESC
+        SELECT * FROM board order by reg_date DESC, bno DESC
     </select>
 
     <select id="insert" parameterType="Board" >

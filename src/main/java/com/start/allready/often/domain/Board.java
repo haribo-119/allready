@@ -1,5 +1,6 @@
 package com.start.allready.often.domain;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Board {
@@ -9,8 +10,8 @@ public class Board {
   private  String writer;
   private  int view_cnt;
   private int comment_cnt;
-  private int reg_date;
-  private int up_date;
+  private Date reg_date;
+  private Date up_date;
 
     @Override
     public String toString() {
@@ -88,19 +89,19 @@ public class Board {
         this.comment_cnt = comment_cnt;
     }
 
-    public int getReg_date() {
+    public Date getReg_date() {
         return reg_date;
     }
 
-    public void setReg_date(int reg_date) {
+    public void setReg_date(Date reg_date) {
         this.reg_date = reg_date;
     }
 
-    public int getUp_date() {
+    public Date getUp_date() {
         return up_date;
     }
 
-    public void setUp_date(int up_date) {
+    public void setUp_date(Date up_date) {
         this.up_date = up_date;
     }
 }
