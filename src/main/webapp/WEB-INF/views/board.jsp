@@ -10,6 +10,27 @@
 </head>
 
 <body>
+<div class="container">
+    <h2 class="writing-header">게시판 ${mode=="new" ? "글쓰기" : "읽기"}</h2>
+    <form id="form" class="frm" action="" method="post">
+        <input type="hidden" name="bno" value="${boardDto.bno}">
+
+        <input name="title" type="text" value="<c:out value='${boardDto.title}'/>" placeholder="  제목을 입력해 주세요." ${mode=="new" ? "" : "readonly='readonly'"}><br>
+        <textarea name="content" rows="20" placeholder=" 내용을 입력해 주세요." ${mode=="new" ? "" : "readonly='readonly'"}><c:out value="${boardDto.content}"/></textarea><br>
+
+        <c:if test="${mode eq 'new'}">
+            <button type="button" id="writeBtn" class="btn btn-write"><i class="fa fa-pencil"></i> 등록</button>
+        </c:if>
+        <c:if test="${mode ne 'new'}">
+            <button type="button" id="writeNewBtn" class="btn btn-write"><i class="fa fa-pencil"></i> 글쓰기</button>
+        </c:if>
+        <c:if test="${boardDto.writer eq loginId}">
+            <button type="button" id="modifyBtn" class="btn btn-modify"><i class="fa fa-edit"></i> 수정</button>
+            <button type="button" id="removeBtn" class="btn btn-remove"><i class="fa fa-trash"></i> 삭제</button>
+        </c:if>
+        <button type="button" id="listBtn" class="btn btn-list"><i class="fa fa-bars"></i> 목록</button>
+    </form>
+</div>
 
 </body>
 </html>

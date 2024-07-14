@@ -32,6 +32,12 @@
         DELETE FROM board
     </delete>
 
+    <select id="selectPage" parameterType="map" resultType="Board">
+        SELECT * FROM board
+        ORDER BY bno DESC, reg_date DESC
+        LIMIT #{offset}, #{pageSize}
+    </select>
+
 
 </mapper>
 

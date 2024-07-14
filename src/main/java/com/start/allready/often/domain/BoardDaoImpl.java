@@ -50,4 +50,10 @@ public class BoardDaoImpl implements BoardDao {
         return sqlSession.delete(namespace+"deleteAll");
     }
 
+    @Override
+    public List<Board> selectPage(Map map) throws Exception {
+        return sqlSession.selectList(namespace+"selectPage",map);
+    }
+
+
 }

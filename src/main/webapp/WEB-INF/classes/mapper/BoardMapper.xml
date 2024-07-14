@@ -5,28 +5,40 @@
 
 <mapper namespace="com.start.allready.mapper.BoardMapper">
     <select id="count" resultType="int">
-        SELECT count(*) FROM borad
+        SELECT count(*) FROM board
     </select>
 
     <select id="selectAll" resultType="Board">
-        SELECT * FROM borad order by reg_date DESC, bno DESC
+        SELECT * FROM board order by reg_date DESC, bno DESC
     </select>
 
-    <select id="insert" parameterType="Board" >
-        insert into board (title,content,writer) values (#{title},#{content},#{writer})
-    </select>
+    <insert id="insert" parameterType="Board" >
+        INSERT INTO board (title,content,writer) VALUES (#{title},#{content},#{writer})
+    </insert>
 
-    <select id="update" parameterType="Board">
-        update board
-        set title=#{title},
+    <update id="update" parameterType="Board">
+        UPDATE board
+        SET title=#{title},
             content=#{content},
             up_date = now()
-        where writer=#{writer} and bno=#{bno}
-    </select>
+        WHERE writer=#{writer} AND bno=#{bno}
+    </update>
     
-    <select id="delete" parameterType="map" >
-        delete from board where writer=#{writer} and bno =#{bno}
+    <delete id="delete" parameterType="map" >
+        DELETE FROM board WHERE writer=#{writer} AND bno =#{bno}
+    </delete>
+
+    <delete id="deleteAll">
+        DELETE FROM board
+    </delete>
+
+    <select id="selectPage" parameterType="map" resultType="Board">
+        SELECT * FROM board
+        ORDER BY bno DESC, reg_date DESC
+        LIMIT #{offset}, #{pageSize}
     </select>
+
+
 </mapper>
 
 
