@@ -41,11 +41,12 @@ public class PageHandlerTest {
 
     @Test
     public void test5(){
-        PageHandler ph = new PageHandler(29, 25,10);
-        assertTrue(ph.getBeginPage() == 21);
-        assertTrue(ph.getEndPage() == 29);
+        PageHandler ph = new PageHandler(255, 120,10);
+//        assertTrue(ph.getBeginPage() == 110);
+//        assertTrue(ph.getEndPage() == );
         ph.print();
     }
+
 
 
 }

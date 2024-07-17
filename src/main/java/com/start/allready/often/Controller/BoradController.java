@@ -32,21 +32,24 @@ public class BoradController {
     public String list(Model model, Integer page, Integer pagesize, HttpServletRequest request){
 
 
+        if(page==null) page=1;
+        if(pagesize==null) pagesize=10;
+
         try {
         int totalCnt = boardDao.count();
 //        int page = pageInput.getPage();
 //        System.out.println(page);
-        PageHandler ph = new PageHandler(totalCnt,1,10);
+        PageHandler ph = new PageHandler(totalCnt,page,pagesize);
         Map map = new HashMap();
-        map.put("offset",(page-1)*pagesize);
-        map.put("pageSize",pagesize);
+        map.put("offset",(page-1)*pagesize); //10
+        map.put("pageSize",pagesize); //10
 
         List<Board> list = boardDao.selectPage(map);
         model.addAttribute("list",list);
         model.addAttribute("totalCnt",totalCnt);
         model.addAttribute("ph",ph);
     }catch (Exception e){
-
+            e.printStackTrace();
     }
 
         return "boardList";
