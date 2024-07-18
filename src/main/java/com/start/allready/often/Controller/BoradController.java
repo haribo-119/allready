@@ -3,6 +3,7 @@ package com.start.allready.often.Controller;
 
 import com.start.allready.often.domain.Board;
 import com.start.allready.often.domain.BoardDao;
+import com.start.allready.often.domain.BoardService;
 import com.start.allready.often.domain.PageHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,8 @@ import java.util.Map;
 public class BoradController {
 
     @Autowired BoardDao boardDao;
-
+    @Autowired
+    BoardService boardService;
 
     @GetMapping("/read")
     public String read(){
@@ -31,12 +33,11 @@ public class BoradController {
     @GetMapping("/list")
     public String list(Model model, Integer page, Integer pagesize, HttpServletRequest request){
 
-
         if(page==null) page=1;
         if(pagesize==null) pagesize=10;
 
         try {
-        int totalCnt = boardDao.count();
+        int totalCnt = boardService.count();
 //        int page = pageInput.getPage();
 //        System.out.println(page);
         PageHandler ph = new PageHandler(totalCnt,page,pagesize);
@@ -44,7 +45,7 @@ public class BoradController {
         map.put("offset",(page-1)*pagesize); //10
         map.put("pageSize",pagesize); //10
 
-        List<Board> list = boardDao.selectPage(map);
+        List<Board> list = boardService.getPage(map);
         model.addAttribute("list",list);
         model.addAttribute("totalCnt",totalCnt);
         model.addAttribute("ph",ph);
