@@ -1,9 +1,12 @@
-package com.start.allready.often.domain;
+package com.start.allready.often.Board;
+
+import org.checkerframework.checker.signature.qual.Identifier;
 
 import java.util.Date;
 import java.util.Objects;
 
 public class Board {
+
   private Integer bno;
   private String title;
   private  String content;

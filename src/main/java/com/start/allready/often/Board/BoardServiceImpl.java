@@ -1,4 +1,4 @@
-package com.start.allready.often.domain;
+package com.start.allready.often.Board;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class BoardServiceImpl implements BoardService {
+ class BoardServiceImpl implements BoardService {
     @Autowired BoardDao boardDao;
 
     @Override

@@ -1,9 +1,9 @@
-package com.start.allready.often.domain;
+package com.start.allready.often.Board;
 
 import java.util.List;
 import java.util.Map;
 
-public interface BoardDao {
+  interface BoardDao {
     int count()throws Exception;
     List<Board> selectAll() throws Exception;
 

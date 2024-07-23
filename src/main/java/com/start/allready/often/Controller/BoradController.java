@@ -1,10 +1,9 @@
 package com.start.allready.often.Controller;
 
 
-import com.start.allready.often.domain.Board;
-import com.start.allready.often.domain.BoardDao;
-import com.start.allready.often.domain.BoardService;
-import com.start.allready.often.domain.PageHandler;
+import com.start.allready.often.Board.Board;
+import com.start.allready.often.Board.BoardService;
+import com.start.allready.often.Board.PageHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +19,7 @@ import java.util.Map;
 @RequestMapping("/board")
 public class BoradController {
 
-    @Autowired BoardDao boardDao;
+
     @Autowired
     BoardService boardService;
 

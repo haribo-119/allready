@@ -1,4 +1,4 @@
-package com.start.allready.often.domain;
+package com.start.allready.often.Board;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 
 @Repository
-public class BoardDaoImpl implements BoardDao {
+class BoardDaoImpl implements BoardDao {
     @Autowired
     private SqlSession sqlSession;
 

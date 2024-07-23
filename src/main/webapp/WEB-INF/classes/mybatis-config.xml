@@ -5,6 +5,6 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="User" type="com.start.allready.often.User.User"/>
-        <typeAlias alias="Board" type="com.start.allready.often.domain.Board"/>
+        <typeAlias alias="Board" type="com.start.allready.often.Board.Board"/>
     </typeAliases>
 </configuration>

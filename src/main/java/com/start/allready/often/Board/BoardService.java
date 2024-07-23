@@ -1,4 +1,4 @@
-package com.start.allready.often.domain;
+package com.start.allready.often.Board;
 
 import java.util.List;
 import java.util.Map;
