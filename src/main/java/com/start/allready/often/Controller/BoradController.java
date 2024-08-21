@@ -24,7 +24,13 @@ public class BoradController {
     BoardService boardService;
 
     @GetMapping("/read")
-    public String read(){
+    public String read(Integer bno,Model m){
+        try{
+            Board board = boardService.read(bno);
+            m.addAttribute(board);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
         return "board";
     }

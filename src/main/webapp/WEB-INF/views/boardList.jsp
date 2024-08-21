@@ -22,7 +22,7 @@
             <c:forEach var="board" items="${list}">
                 <tr>
                     <td class="no">${board.bno}</td>
-                    <td class="title"><a><c:out value="${board.title}"/></a></td>
+                    <td class="title"><a href="<c:url value="/board/read?bno=${board.bno}"/>"><c:out value="${board.title}"/></a></td>
                     <td class="writer">${board.writer}</td>
                     <c:choose>
                         <c:when test="${board.reg_date.time >= startOfToday}">

@@ -23,6 +23,11 @@ class BoardDaoImpl implements BoardDao {
     }
 
     @Override
+    public Board select(Integer bno)throws  Exception{
+        return  sqlSession.selectOne(namespace+"select", bno);
+    }
+
+    @Override
     public List<Board> selectAll() throws Exception {
         return sqlSession.selectList(namespace + "selectAll");
     }

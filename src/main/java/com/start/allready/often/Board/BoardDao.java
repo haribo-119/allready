@@ -5,6 +5,9 @@ import java.util.Map;
 
   interface BoardDao {
     int count()throws Exception;
+
+    Board select(Integer bno)throws  Exception;
+
     List<Board> selectAll() throws Exception;
 
     int insert(Board board) throws Exception;

@@ -16,6 +16,11 @@ import java.util.Map;
     }
 
     @Override
+    public Board read(Integer bno)throws  Exception{
+        return boardDao.select(bno);
+    }
+
+    @Override
     public List<Board> getList() throws Exception{
         return boardDao.selectAll();
     }

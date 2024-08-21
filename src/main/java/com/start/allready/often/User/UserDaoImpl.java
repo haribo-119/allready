@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserDaoImpl implements UserDao {
+ class UserDaoImpl implements UserDao {
     @Autowired private SqlSession sqlsession;
 
     private static String namespace="com.start.allready.mapper.UserMapper.";

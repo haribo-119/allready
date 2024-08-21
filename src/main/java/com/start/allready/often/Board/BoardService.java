@@ -16,5 +16,7 @@ public interface BoardService {
 
     int deleteAll() throws Exception;
 
+    Board read(Integer bno) throws Exception;
+
     List<Board> getPage(Map map) throws Exception;
 }

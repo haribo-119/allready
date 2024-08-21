@@ -8,6 +8,10 @@
         SELECT count(*) FROM board
     </select>
 
+    <select id="select" parameterType="int" resultType="Board">
+        SELECT * FROM board where bno = #{bno}
+    </select>
+
     <select id="selectAll" resultType="Board">
         SELECT * FROM board order by reg_date DESC, bno DESC
     </select>

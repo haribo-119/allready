@@ -27,7 +27,7 @@
     </div>
     <ul>
       <li><a href="#a">White Peper</a></li>
-      <li><a href="#a">FAQ</a></li>
+      <li><a href="<c:url value="/board/list"/>">FAQ</a></li>
       <li class="join"><a href="<c:url value="/login/login.do"/>">Sign In</a></li>
     </ul>
   </header>
