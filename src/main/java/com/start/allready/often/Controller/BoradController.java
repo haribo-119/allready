@@ -24,10 +24,12 @@ public class BoradController {
     BoardService boardService;
 
     @GetMapping("/read")
-    public String read(Integer bno,Model m){
+    public String read(Integer bno,Model model,Integer page,Integer pagesize) {
         try{
             Board board = boardService.read(bno);
-            m.addAttribute(board);
+            model.addAttribute(board);
+            model.addAttribute("page",page);
+            model.addAttribute("pagesize",pagesize);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -54,6 +56,8 @@ public class BoradController {
         model.addAttribute("list",list);
         model.addAttribute("totalCnt",totalCnt);
         model.addAttribute("ph",ph);
+        model.addAttribute("page",page);
+        model.addAttribute("pagesize",pagesize);
     }catch (Exception e){
             e.printStackTrace();
     }
